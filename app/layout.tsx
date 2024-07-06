@@ -1,6 +1,7 @@
 'use client';
 import StyledComponentsRegistry from '../lib/registry';
 import GlobalStyle from './styles/GlobalStyle';
+import { Toaster } from 'react-hot-toast';
 
 export default function RootLayout({
   children,
@@ -12,6 +13,7 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyle />
+          <Toaster />
           {children}
         </StyledComponentsRegistry>
       </body>
