@@ -8,11 +8,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 16px; // lub inna wartość w zależności od preferencji
+    font-size: 16px;
   }
 
   body {
-    font-family: 'Arial', sans-serif; // lub inna domyślna czcionka
+    font-family: 'Arial', sans-serif;
   }
 `;
 
