@@ -1,14 +1,9 @@
 import React from 'react';
 import { useFormContext, Controller } from 'react-hook-form';
+import { ICustomInputProps } from './CustomInput.types';
 import { InputWrapper, Label, ErrorMessage, Input } from './CustomInput.styled';
 
-interface CustomInputProps {
-  name: string;
-  label: string;
-  type?: string;
-}
-
-const CustomInput: React.FC<CustomInputProps> = ({
+const CustomInput: React.FC<ICustomInputProps> = ({
   name,
   label,
   type = 'text',

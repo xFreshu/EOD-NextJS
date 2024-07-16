@@ -8,11 +8,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 16px;
+    font-size: 62.5%;
   }
 
   body {
     font-family: 'Arial', sans-serif;
+      font-size: 1.6rem;
   }
 `;
 
