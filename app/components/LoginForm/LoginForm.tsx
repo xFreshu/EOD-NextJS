@@ -30,6 +30,7 @@ const LoginForm: React.FC = () => {
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     console.log(data);
+    router.push('/dashboard');
   };
 
   return (
