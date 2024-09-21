@@ -7,8 +7,8 @@ import { useForm, SubmitHandler, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { IFormInput } from './LoginForm.types';
-import CustomInput from '../CustomInput/CustomInput';
-import Button from '../Button/Button';
+import CustomInput from '../../../common/CustomInput/CustomInput';
+import Button from '../../../common/Button/Button';
 
 const schema = yup.object().shape({
   username: yup.string().required('Username is required'),

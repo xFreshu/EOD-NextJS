@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { Wrapper, HeaderContainer, LoginContainer } from './app.styled';
-import LoginForm from './components/LoginForm/LoginForm';
+import LoginForm from './components/features/auth/LoginForm/LoginForm';
 
 const App: FC = () => {
   return (
