@@ -1,14 +1,15 @@
 'use client';
 
-import React from 'react';
+import { FC } from 'react';
+import { Form } from '../../../layout/AuthLayout/AuthLayout.styled';
 import { useRouter } from 'next/navigation';
-import { Form } from './LoginForm.styled';
 import { useForm, SubmitHandler, FormProvider } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { IFormInput } from './LoginForm.types';
+import { ILoginFormInput } from './LoginForm.types';
 import CustomInput from '../../../common/CustomInput/CustomInput';
 import Button from '../../../common/Button/Button';
+import { toast } from 'react-toastify';
 
 const schema = yup.object().shape({
   username: yup.string().required('Username is required'),
@@ -16,10 +17,10 @@ const schema = yup.object().shape({
   rememberMe: yup.boolean().optional(),
 });
 
-const LoginForm: React.FC = () => {
+const LoginForm: FC = () => {
   const router = useRouter();
 
-  const methods = useForm<IFormInput>({
+  const methods = useForm<ILoginFormInput>({
     resolver: yupResolver(schema),
     defaultValues: {
       username: '',
@@ -28,7 +29,11 @@ const LoginForm: React.FC = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+  const onSubmit: SubmitHandler<ILoginFormInput> = (data) => {
+    toast.success(`Success: ${JSON.stringify(data)}`, {
+      position: 'top-right',
+      autoClose: 1000,
+    });
     console.log(data);
     router.push('/dashboard');
   };

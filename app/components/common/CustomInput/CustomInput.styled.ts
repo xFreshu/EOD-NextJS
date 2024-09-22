@@ -18,6 +18,7 @@ export const Input = styled.input`
 `;
 
 export const ErrorMessage = styled.span`
+  text-align: left !important;
   color: red;
   font-size: 1.6rem;
   display: flex;
